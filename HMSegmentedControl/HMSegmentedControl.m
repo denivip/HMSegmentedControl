@@ -715,7 +715,7 @@
             sectionsCount = [self.sectionTitles count];
         }
         
-        if (segment != self.selectedSegmentIndex && segment < sectionsCount) {
+        if (segment < sectionsCount) {//segment != self.selectedSegmentIndex -> we have to deal with custom "sametabtap" behaviour
             // Check if we have to do anything with the touch event
             if (self.isTouchEnabled)
                 [self setSelectedSegmentIndex:segment animated:self.shouldAnimateUserSelection notify:YES];
